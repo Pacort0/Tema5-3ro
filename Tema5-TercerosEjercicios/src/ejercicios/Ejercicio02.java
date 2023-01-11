@@ -23,7 +23,7 @@ public class Ejercicio02 {
 		/**
 		 * Contador de números impares generados
 		 */
-		int contadorImpar = 0;
+		int contadorImpar = tabla.length - 1;
 		/**
 		 * Contador de números pares generados
 		 */
@@ -43,9 +43,9 @@ public class Ejercicio02 {
 			//Si no es par, es impar
 			else {
 				//Insertamos el número en la tabla por detrás en la primera posición disponible
-				tabla[(tabla.length-1) - contadorImpar] = i;
+				tabla[contadorImpar] = i;
 				//Aumentamos el valor del contador pertinente
-				contadorImpar++;	
+				contadorImpar--;	
 			}
 		}
 		//Imprimimos el array final
