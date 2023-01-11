@@ -2,7 +2,11 @@ package ejercicios;
 
 import java.util.Arrays;
 import java.util.Scanner;
-
+/**
+ * ejercicio 1
+ * @author frodriguez
+ *
+ */
 public class Ejercicio01 {
 	
 	/**
@@ -28,14 +32,14 @@ public class Ejercicio01 {
 		/**
 		 * Escáner del programa
 		 */
-		Scanner sc = new Scanner(System.in);
+		final Scanner scan = new Scanner(System.in);
 		
 		/**
 		 * Bucle for para rellenar la tabla 1
 		 */
 		for(int i = 0; i < tabla1.length; i++) {
 			System.out.print("Introduzca un valor: ");
-			tabla1[i] = sc.nextInt();
+			tabla1[i] = scan.nextInt();
 		}
 		
 		/**
@@ -54,9 +58,9 @@ public class Ejercicio01 {
 		  */
 		 tabla2[0] = ultimo;
 		 
-		 System.out.print(Arrays.toString(tabla1));
+		 System.out.println(Arrays.toString(tabla1));
 		 System.out.print(Arrays.toString(tabla2));
 		
-		 sc.close();
+		 scan.close();
 	}
 }
