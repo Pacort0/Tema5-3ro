@@ -25,7 +25,7 @@ public class Ejercicio03 {
 					break;
 				}
 			}
-			if (primo == true) {
+			if (primo) {
 				tablaPrima[contPrimo] = tabla[i];
 				contPrimo++;
 			} 
