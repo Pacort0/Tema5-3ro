@@ -13,9 +13,6 @@ public class Ejercicio01 {
 		int tabla1[] = new int [TAM];
 		int tabla2[] = new int [TAM];
 		
-		//Último número que se introduzca por teclado
-		int ultimo;
-		
 		//Escáner del programa
 		final Scanner scan = new Scanner(System.in);
 		
@@ -24,16 +21,13 @@ public class Ejercicio01 {
 			System.out.print("Introduzca un valor: ");
 			tabla1[i] = scan.nextInt();
 		}
-		
-		 //El último valor introducido se guarda en ultimo
-		 ultimo = tabla1[TAM - 1];
 		 
 		 //Copiamos los valores de la tabla 1 a la tabla 2 de las posiciones 0 a la 14,
 		 // empezando por la segunda posición de la tabla 2
 		  System.arraycopy(tabla1, 0, tabla2, 1, TAM-1);
 
 		  //La primera posición de la tabla 2 es 'ultimo'
-		 tabla2[0] = ultimo;
+		 tabla2[0] = tabla1[TAM-1];
 		 
 		 System.out.println(Arrays.toString(tabla1));
 		 System.out.print(Arrays.toString(tabla2));
