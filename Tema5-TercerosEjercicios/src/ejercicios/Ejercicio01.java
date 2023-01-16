@@ -30,7 +30,7 @@ public class Ejercicio01 {
 		 
 		 //Copiamos los valores de la tabla 1 a la tabla 2 de las posiciones 0 a la 14,
 		 // empezando por la segunda posición de la tabla 2
-		  System.arraycopy(tabla1, 0, tabla2, 1, 14);
+		  System.arraycopy(tabla1, 0, tabla2, 1, TAM-1);
 
 		  //La primera posición de la tabla 2 es 'ultimo'
 		 tabla2[0] = ultimo;
