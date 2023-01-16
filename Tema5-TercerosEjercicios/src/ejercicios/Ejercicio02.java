@@ -5,29 +5,19 @@ import java.util.Arrays;
 public class Ejercicio02 {
 
 	public static void main(String[] args) {
-		/**
-		 * Creación de la tabla y asignación de tamaño
-		 */
+		//Creación de la tabla y asignación de tamaño
 		int tabla[] = new int [20];
-		/**
-		 * Contador de números impares generados
-		 */
-		int contadorImpar = 0;
-		/**
-		 * Contador de números pares generados
-		 */
+		// Contador de números impares generados
+		int contadorImpar = tabla.length-1;
+		//Contador de números pares generados
 		int contadorPar = 0;
-		/**
-		 * Variable para guardar cada número generado
-		 */
+		//Variable para guardar cada número generadO
 		int num;
 		
-		/**
-		 * Bucle for que recorre y va rellenando la tabla
-		 */
+		//Bucle for que recorre y va rellenando la tabla
 		for(int i = 0; i < tabla.length; i++) {
-			num = (int)(Math.random()*100 - 0);
-				//Si el número es divisible entre 2, es par
+			num = (int)(Math.random()*101);
+				//Si el número es divisible entre 2, es par]
 			if(num % 2 == 0) {
 				//Lo insertamos en la tabla por el comienzo 
 				tabla[contadorPar] = num;
@@ -37,9 +27,9 @@ public class Ejercicio02 {
 			//Si no es par, es impar
 			else {
 				//Insertamos el número en la tabla por detrás en la primera posición disponible
-				tabla[(tabla.length-1) - contadorImpar] = num;
+				tabla[contadorImpar] = num;
 				//Aumentamos el valor del contador pertinente
-				contadorImpar++;	
+				contadorImpar--;	
 			}
 		}
 		//Imprimimos el array final

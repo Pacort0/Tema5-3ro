@@ -8,8 +8,8 @@ public class Ejercicio05 {
 	public static void main(String[] args) {
 		//Creamos las variables del programa
 		int tablaEnteros[] = new int[10]; //Tabla original
-		int numPares[] = new int[tablaEnteros.length]; //Tabla de pares
-		int numImpares[] = new int [tablaEnteros.length]; //Tabla de impares
+		int numPares[] = new int[0]; //Tabla de pares
+		int numImpares[] = new int [0]; //Tabla de impares
 		int contImpares = 0; //Contador de impares
 		int contPares = 0; //Contador de pares
 		
@@ -24,10 +24,12 @@ public class Ejercicio05 {
 		//Bucle for que separa los números en sus correspondientes tablas
 		for(int j = 0; j < tablaEnteros.length; j++) {
 			if(signo(tablaEnteros[j])) {
+				numImpares = Arrays.copyOf(numImpares, contImpares+1);
 				numImpares[contImpares] = tablaEnteros[j];
 				contImpares++;
 			}
 			else {
+				numPares = Arrays.copyOf(numPares, contPares+1);
 				numPares[contPares] = tablaEnteros[j];
 				contPares++;
 			}
