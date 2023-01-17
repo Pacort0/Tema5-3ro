@@ -24,14 +24,18 @@ public class Ejercicio05 {
 		//Bucle for que separa los números en sus correspondientes tablas
 		for(int j = 0; j < tablaEnteros.length; j++) {
 			if(signo(tablaEnteros[j])) {
+				//Creamos una copia de la tabla de impares pero con un hueco más
 				numImpares = Arrays.copyOf(numImpares, contImpares+1);
+				//Introducimos el nuevo número impar
 				numImpares[contImpares] = tablaEnteros[j];
-				contImpares++;
+				contImpares++; //Aumentamos el valor del contador de impares
 			}
 			else {
+				//Creamos una copia de la tabla de pares pero con unn hueco más
 				numPares = Arrays.copyOf(numPares, contPares+1);
+				//Introducimos el nuevo número par
 				numPares[contPares] = tablaEnteros[j];
-				contPares++;
+				contPares++; //Aumentamos el valor del contador de pares
 			}
 		}
 		

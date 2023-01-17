@@ -25,9 +25,11 @@ public class Ejercicio04 {
 		for(int i = 0; i < tablaEnteros.length; i++){
 			//Llamamos a la función 'busqueda'
 			if(!busqueda(tablaEnteros[i], tablaNoRepite)) {
+				//Creamos una copia de la nueva tabla pero con un hueco más
 				tablaNoRepite = Arrays.copyOf(tablaNoRepite, tablaNoRepite.length+1);
+				//Metemos el número en la tabla
 				tablaNoRepite[posicionNueva] = tablaEnteros[i];
-				posicionNueva++;
+				posicionNueva++; //Aumentamos el valor del contador de posiciones
 			}
 		}
 		
