@@ -28,6 +28,12 @@ public class Ejercicio07 {
 			
 			//Se imprime al menos una vez
 		do {	
+			//Menú del programa
+			System.out.println("ELIJA UNA OPCIÓN: \n"
+					+ "A) Mostrar valores\n"
+					+ "B) Introducir valor\n"
+					+ "C) Salir");
+				opcion = sc.next();
 			//Según la opción introducida
 			switch(opcion) {
 			case "a": //opción 'a'
@@ -45,12 +51,6 @@ public class Ejercicio07 {
 				break;
 				default:  //Si la opción introducida no existe
 					System.out.println("Esa opción no existe"); 
-			}
-			//Pedimos otra opción
-			System.out.println("\nElija otra opción: ");
-			opcion = sc.next();
-			if(opcion.equals("c")) {
-				System.out.println("Programa cerrado, tenga un buen día.");
 			}
 		} while(!opcion.equals("c")); //El bucle correrá mientras opción != c
 		
